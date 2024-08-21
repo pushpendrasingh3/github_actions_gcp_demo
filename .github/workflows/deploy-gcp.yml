@@ -41,6 +41,6 @@ jobs:
           GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
         run: |
           gcloud auth configure-docker asia.gcr.io
-          docker build -t asia.gcr.io/$GOOGLE_PROJECT/nginx:${IMAGE_TAG} .
-          docker push asia.gcr.io/$GOOGLE_PROJECT/nginx:${IMAGE_TAG}
+          docker build -t asia.gcr.io/$GOOGLE_PROJECT/demo/nginx:latest .
+          docker push asia.gcr.io/$GOOGLE_PROJECT/demo/nginx:latest
           echo Hello, world!
